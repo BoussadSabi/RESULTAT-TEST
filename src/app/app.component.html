@@ -1,0 +1,55 @@
+
+<div class="container">       <!-- pour mettre tt au milieu comme se voix la en execution -->
+<div class="row">
+
+    <div class="col-md-4">
+      <h1 style.color="#185196" class="text-primary">Sabrina BOUSSAD</h1>
+    </div>
+
+    <div class="col-md-8">
+    <h1 style.color="#185196" class="text-primary">Mon Test Angular/NodeJs</h1>
+    </div>
+
+</div>
+<hr>  <!-- faire le trai -->
+
+  <!--creer la bare de navigation des components -->
+
+<div class="Container">
+  <div class="row">
+    <nav class="navbar navbar-default">                             <!--des balises bootstrap-->
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+
+          <!-- roterLink efficace our lappel des component fils ds la meme page-->
+
+          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/"><strong>Home</strong></a></li>            <!-- # signifi sans lien lien vide ceer juste la bare-->
+          <li routerLinkActive="active"><a routerLink="/about"><strong>About</strong></a></li>    <!-- difference entre routerLink et href, le premier garde la mem page lors de léxecution il charge juste la page dautre component   -->
+          <li routerLinkActive="active"><a routerLink="/blog"><strong>Blog</strong></a></li>        <!-- par contre href il rafrechi tt le temps lorsque on veu charger une nouvelle page il fais pas associer les autre page-->
+          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/affichage"><strong>Afficher un Pangolin</strong></a></li>
+          <li routerLinkActive="active"><a routerLink="/modification"><strong>Modifier un Pangolin</strong></a></li>
+          <li routerLinkActive="active"><a routerLink="/suppression"><strong>Suppression un Pangolin</strong></a></li>
+          <!--[routerLinkActiveOptions]="(exact:true)" signifi que ce lien home sera activer juste sil est clisué de sus -->
+          <!-- class='active' garde le lien toujours bleu actif -->
+          <!--routLinkActive signifi qi on clik sur le lien devein bleu actif -->
+          <!--[routerLinkActiveOptions]="{exact:true}" signifi que home sera activer bleu juste si on click desus -->
+
+        </ul>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+  <!-- la palce ou afficher mes composant ds le meme component principale appComponent-->
+  <!-- pour creer les routes ici aller ds .ts et importer Routes -->
+  <!--<creer ds .ts une constantes Routes lui atrribuer toutes les routes de l'application-->
+  <!-- pour utilisé cette constante ou cet ensemble de route on doit appeler la fonction forRoot() qui existe ds RouterModule quon doit importer -->
+  <!-- cette fonction forRoot permet dappler notre constante ROUTES quon a declarer qui contient lensemble des routes de notre fonction -->
+
+<!-- router-outlet la seule instruction qui definis ou placer nos composant fils-->
+  <div class="">
+    <h2 style="color:#8A2BE2">Bienvenue à l'Acceuil de la Création d'un mini carnet d'adresse pour "Pangolin" :</h2>
+    <router-outlet></router-outlet>            <!-- elle permet d'afficher ici nos composant fils, permet de specifier la place ou afficher nos flis-->
+
+  </div>

@@ -1,0 +1,80 @@
+
+<div class="container" >
+  <h2 class="text-center" [ngStyle]="{color:'red'}">Authentification  </h2>
+  <button class="btn btn-success" *ngIf="!authStatus" (click)="onSignIn()" >Se Connecter</button>
+
+
+  <div class="row custom-row">
+    <div class= "col-sm-12 custom-container jumbotron">
+      <legend>Veuillez Saisir votre login et mot de passe</legend>
+  <div class="text-center"> <!-- maitre le texte  au milieu  -->
+  <div>
+    <img src="https://www.supinfo.com/articles/resources/204659/6316/1.png" width="20%" height="20%" alt="">
+    <H2> Formulaire de Saisie  </H2>
+  </div>
+    <div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <form class="form-vertical"  (ngSubmit)="submitForm(myform.value)">
+            <fieldset>
+            <div class="form-group">
+            <br/>
+              <div class="form-group">
+
+                <input type="range">
+                <input type="range" value="15" max="50" min="0" step="5">
+                <br/>
+                <label>Choisir une couleur:</label>
+              <input type="color" value="#fad345" name="textcolor">
+              </div>
+              <br/>
+              <div>
+              <label>Entré votre Login:</label>
+              <input type="text" name="name" ngModel class="form-control" autocomplete="off"/>
+              </div>
+            </div>
+
+
+
+            <div class="form-group">
+              <label>Entré Un Mot de passe :</label>
+              <input type="password" name="pass" ngModel class="form-control" autocomplete="off"/>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword" >Confirm Password</label>
+              <input type="password" id="confirmPassword" ngModel placeholder="Password" class="form-control" autocomplete="off"/>
+            </div>
+            <br/>
+            <div class="form-group checkbox">
+              <label>
+                <input type="checkbox"> Confirm that you've read the Terms and
+                Conditions
+              </label>
+            </div>
+              <div class="form-group">
+                <input type="submit"class="btn btn-primary btn-block" value="valider"/>
+                <input type="reset"class="btn btn-default btn-block" value="annuler"/>
+              </div>
+
+              </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+<!--Grid row-->
+
+  <!--
+  <div class = "alert alert-block" >
+    <button type = "button" class = "close" data-disable = "alert" > & times; </button>
+    <h4> Attention! </h4>
+    Mieux vaut vérifier vous-même, vous n'êtes pas ...
+  </div>
+  -->
+  </div>
+    </div>
+  </div>
+</div>
+
+
